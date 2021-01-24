@@ -1,0 +1,72 @@
+#cont {
+    width: 50vw;
+    height: 60vh;
+    margin: 20vh auto; /* center later */
+    border: 1px solid #eee;
+}
+
+#cont h1 {
+    text-align: center;
+}
+
+/*-- header --*/
+#header {
+    text-align: center;
+}
+
+/*-- check in sectoin --*/
+#check-in {
+    text-align: center;
+}
+
+#check-in h1 {
+    font-size: 1.5rem;
+}
+
+#check-in input[type=text] {
+    margin: auto;
+    width: 100%; /* going out of the contianer for some reason */
+    height: 80%; /* need better dimensions - later */
+    text-align: center;
+    border: none;
+    font-size: 1rem;
+}
+
+/*-- journal --*/
+#journal textarea {
+    height: 50vh;
+    text-align: left;
+    border: 1px solid #eee;
+}
+
+/*-- animal pic --*/
+#animal-img img {
+    max-width: 100%;
+}
+
+/*-- panic button --*/
+button#panic {
+    background: red;
+    color: white;
+    font-size: 3rem;
+    padding: 2rem;
+    border-radius: 3rem;
+    box-shadow: 0 1rem #999;
+    transition:0s;
+    margin-top: 5rem;
+}
+
+button#panic:hover {
+    background: darkred;
+}
+
+button#panic:active {
+    background-color:darkred;
+    box-shadow: 0 0.5rem #666;
+    transform: translateY(0.5rem);
+    transition:0s;
+  }
+
+button#panic-reset {
+    margin-top: 4rem;
+}
