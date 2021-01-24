@@ -2,15 +2,66 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <title>enflowering</title>
+    <!-- <link rel="shortcut icon" href="/images/logo.png"> -->
+
     <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link href="/css/chill.css" rel="stylesheet" type="text/css" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Karla:400,400i,700,700i|Source+Sans+Pro:400,400i,600,600i&display=swap" rel="stylesheet">
+
     <script src="https://kit.fontawesome.com/4a07f93241.js" crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   </head>
+
   <body>
-    <script type="text/javascript" src="/js/jquery.style-my-tooltips.js"></script>
+
+    <!-- header -->
+    <div id="header">
+        <h1>enflowering</h1>
+    </div>
+
+    <!-- sidebar -->
+    <div id="sidebar">
+        <img src="/images/pfp2.png" alt="profile picture"/>
+        <a href="/" title="index"><i class="ri-home-4-line"></i></a>
+        <a id="tracker-l" title="mood tracker"><i class="ri-emotion-happy-line"></i></a>
+        <a href="#periods" title="periods"><i class="ri-moon-line"></i></a>
+        <a href="#menopause" title="menopause"><i class="ri-pause-circle-line"></i></a>
+    </div>
+
+    <!-- main container -->
+    <div id="cont">
+
+        <div id="check-in">
+            <h1 id="question">how are you feeling today?</h1>
+
+            <div id="options">
+                <form id="feelings">
+                    <!-- <input type="text" id="user-res" name="user-res" placeholder="i feel... " autofocus>
+                    <input class="submit" type="submit" value="submit"> -->
+                    <div class="emotion"><i class="ri-emotion-happy-line"></i></div>
+                    <div class="emotion"><i class="ri-emotion-normal-line"></i></div>
+                    <div class="emotion"><i class="ri-emotion-unhappy-line"></i></div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- tracker -->
+    <div id="tracker">
+      <button id="exit">x</button>
+      <h2>january</h2>
+      <div id="calendar"></div>
+    </div>
+
+
+  <script src="/js/index.js"></script>
+  <script src="/js/calendar.js"></script>
+  <script type="text/javascript" src="/js/jquery.style-my-tooltips.js"></script>
     <script>
     (function($){
        $(document).ready(function(){
@@ -18,10 +69,61 @@
                tip_follows_cursor:true,
                tip_delay_time:200,
                tip_fade_speed:300
-           }
-               );
+           });
        });
     })(jQuery);
     </script>
   </body>
 </html>
+
+<!-- resources -->
+
+<header>
+  <div class="container" id="menopause">
+      <div id="branding">
+          <h1> Menopause Coping Mechanisms</h1>
+      </div>
+</header>
+  <section id= "boxes">
+<div class= "container">
+          <div class="box">
+              <a href=" https://www.verywellhealth.com/coping-with-menopausal-symptoms-2322672"> Very Well Health </a>
+          </div>
+          <div class="box">
+              <a href="https://www.health.harvard.edu/womens-health/dealing-with-the-symptoms-of-menopause "> Harvard Resources  </a>
+          </div>
+
+          <div class="box">
+            <a href=" https://www.webmd.com/menopause/sex-menopause-20/slideshow-10-ways-to-deal-with-menopause-symptoms "> WebMD </a>
+        </div>
+        <div class="box">
+            <a href="https://www.healthline.com/nutrition/11-natural-menopause-tips"> Healthline  </a>
+        </div>
+  <div class= "box">
+  </div>
+</div>
+
+<header>
+  <div class="container" id="periods">
+      <div id="branding">
+          <h1> Period Coping Mechanisms</h1>
+      </div>
+</header>
+  <section id= "boxes">
+<div class= "container">
+          <div class="box">
+              <a href="https://www.rchsd.org/health-articles/coping-with-common-period-problems/ "> RCHSD Resources </a>
+          </div>
+          <div class="box">
+              <a href="https://www.uofmhealth.org/health-library/aq0001 "> UOFM Resources  </a>
+          </div>
+
+          <div class="box">
+            <a href=" https://www.healthpartners.com/blog/13-ways-to-stop-period-pain/ "> Health Partners Resources </a>
+        </div>
+        <div class="box">
+            <a href="https://www.simplehealth.com/blog/what-to-expect-at-the-gynecologist-office "> Simple Health Resources  </a>
+        </div>
+  <div class= "box">
+  </div>
+</div>

@@ -1,34 +1,29 @@
 // change content after submitting how user feels 
 let feeling;
-$('#feelings').submit(function(e) {
-    e.preventDefault();
-    feeling = $('#feelings input[type=text]').val();
+$(document).on("click", ".emotion", function() {
+    // save in tracker
+    let day = document.getElementsByClassName("day")[28];
+    if ($('.emotion').index(this) == 0) {
+        day.innerHTML = '<i class="ri-emotion-happy-line"></i>';
+    } else if ($('.emotion').index(this) == 1) {
+        day.innerHTML = '<i class="ri-emotion-normal-line"></i>';
+    } else {
+        day.innerHTML = '<i class="ri-emotion-sad-line"></i>';
+    }
     let question = document.getElementById("question");
-    // change question (MAKE SURE THAT USER ACTUALLY INPUTS SOMETHING AND THAT IT ANSWERS QUESTION)
-    question.innerHTML = "do you want me to guide you, or do you want to seek your own adventures?";
+    // change question 
+    question.innerHTML = "relax";
     // change to options
-    let options1 = `
-        <div id="options">
-            <button>guide me, please</button>
-            <button id="self-guide">no, i'm fine by myself</button>
-        </div>
+    let options = `
+    <div id="options-2">
+        <button id="journal-op">journal</button>
+        <button id="wholesome-op">cat pictures</button>
+        <button id="panic-op">panic button</button>
+    </div>
     `;
-    $("#feelings").replaceWith(options1);
+    $("#feelings").replaceWith(options);
 });
 
-// change content after choosing self-guide option
-$(document).on("click", "#self-guide", function() {
-    let options2 = `
-        <div id="options-2">
-            <button id="meditate-op">meditation/breathing</button>
-            <button id="activites-op">fun/relaxing activites</button>
-            <button id="journal-op">journal</button>
-            <button id="wholesome-op">wholesome pictures</button>
-            <button id="panic-op">panic button</button>
-        </div>
-    `;
-    $('#options').replaceWith(options2); 
-});
 
 // go to jounral
 $(document).on("click", "#journal-op", function() {
